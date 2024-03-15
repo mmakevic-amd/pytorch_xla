@@ -3,6 +3,11 @@ load(
     "if_cuda_is_configured",
 )
 
+load(
+    "@local_config_rocm//rocm:build_defs.bzl",
+    "if_rocm_is_configured",
+)
+
 cc_binary(
     name = "_XLAC.so",
     copts = [
@@ -28,5 +33,7 @@ cc_binary(
         "@torch//:libtorch_python",
     ] + if_cuda_is_configured([
         "@xla//xla/stream_executor:cuda_platform",
+    ]) + if_rocm_is_configured([
+        "@xla//xla/stream_executor:rocm_platform",
     ]),
 )

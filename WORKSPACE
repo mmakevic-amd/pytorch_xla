@@ -51,9 +51,9 @@ http_archive(
         "//openxla_patches:f16_abi_clang.diff",
         "//openxla_patches:quant_dequant_converter.diff",
     ],
-    strip_prefix = "xla-18cbd2019898d3a7b563aeb73683f0c5a6ce14fd",
+    strip_prefix = "xla-7208cd5ebd85fea69ce1a492f9ad449031e6c5a2",
     urls = [
-        "https://github.com/openxla/xla/archive/18cbd2019898d3a7b563aeb73683f0c5a6ce14fd.tar.gz",
+        "https://github.com/mmakevic-amd/xla/archive/7208cd5ebd85fea69ce1a492f9ad449031e6c5a2.tar.gz",
     ],
 )
 
